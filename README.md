@@ -1,4 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/yAmsky1/python-project-lvl4/workflows/hexlet-check/badge.svg)](https://github.com/yAmsky1/python-project-lvl4/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b4a10a79be8b3aeeaa53/maintainability)](https://codeclimate.com/github/yAmsky1/python-project-lvl4/maintainability)
 
-https://quiet-ocean-03236.herokuapp.com/
+
+https://dry-reaches-00803.herokuapp.com
