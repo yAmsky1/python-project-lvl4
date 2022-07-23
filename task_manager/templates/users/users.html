@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">{{ title }}</h1>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">{% translate "User name" %}</th>
+                <th scope="col">{% translate "Full name" %}</th>
+                <th scope="col">{% translate "Created at" %}</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.first_name }} {{ user.last_name }}</td>
+                <td>{{ user.date_joined|date:"d.m.Y, H:i" }}</td>
+                <td>
+                    <a href="{% url 'users:change' user.id %}">{% trans "Change" %}</a>
+                    <br>
+                    <a href="{% url 'users:delete' user.id %}">{% trans "Delete" %}</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

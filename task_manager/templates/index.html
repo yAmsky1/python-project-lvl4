@@ -3,23 +3,18 @@
 {% load bootstrap4 %}
 {% load i18n %}
 
-{% block navbar_menu %}
-{% endblock navbar_menu %}
-
-{% block navbar_buttons %}
-    <form class="form-inline">
-      <button class="btn btn-dark" type="submit">{% trans "Sign in" %}</button>
-      <button class="btn btn-dark" type="submit">{% trans "Registration" %}</button>
-    </form>
-{% endblock navbar_buttons %}
-
+{% block title %}
+    <title>{% trans "Task-manager" %}</title>
+{% endblock %}
 {% block content %}
-    <div class="container wrapper flex-grow-1">
-      <div class="jumbotron">
+<div class="container wrapper flex-grow-1">
+    <div class="card">
+      <div class="card-body p-5 bg-light">
           <div class="display-4">{% trans "Hello from Hexlet!" %}</div>
           <p class="lead">{% trans "Practical programming courses" %}</p>
           <hr>
-          <a class="btn btn-lg btn-primary" href="https://ru.hexlet.io">{% trans "Learn more" %}</a>
+          <a class="btn btn-lg btn-dark" href="https://ru.hexlet.io">{% trans "Learn more" %}</a>
       </div>
     </div>
+</div>
 {% endblock %}

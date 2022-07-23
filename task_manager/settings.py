@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'task_manager',
     'bootstrap4',
+    'task_manager.users',
 ]
 
 MIDDLEWARE = [
@@ -98,6 +99,8 @@ DATABASES['default'].update(db_from_env)
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
+AUTH_USER_MODEL = "users.User"
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -138,5 +141,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOCALE_PATHS = ( os.path.join(BASE_DIR, 'locale'), )
-
+LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'),)
