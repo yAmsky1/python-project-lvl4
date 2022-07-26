@@ -27,6 +27,8 @@ jobs:
           ./cc-test-reporter before-build
 
       - name: test-coverage
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
         run: make coverage
 
       - name: send reporter
