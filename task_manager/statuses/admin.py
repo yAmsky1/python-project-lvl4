@@ -7,7 +7,7 @@ class UserAdmin(admin.ModelAdmin):
         'name',
         'created_at',
         'modified_at',
-)
+    )
     search_fields = ('name',)
 
 

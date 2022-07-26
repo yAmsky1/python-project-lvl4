@@ -11,7 +11,7 @@ lint:
 	poetry run flake8 task_manager
 
 test:
-	poetry run python3 manage.py test
+	poetry run python manage.py test
 
 messages:
 	django-admin makemessages --ignore="static" --ignore=".env" -l ru
@@ -22,3 +22,8 @@ compile:
 migrations:
 	poetry run python3 manage.py makemigrations
 	poetry run python3 manage.py migrate
+
+coverage:
+	poetry run coverage run manage.py test
+	poetry run coverage xml
+	poetry run coverage report
