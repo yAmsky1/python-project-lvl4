@@ -1,11 +1,8 @@
-
 from django.contrib import messages
 from django.contrib.auth.mixins import AccessMixin
 from django.shortcuts import redirect
-from django.utils.translation import gettext_lazy
 
-NO_PERMISSION_MESSAGE = gettext_lazy('You cannot change other users!')
-LOGIN_REQUIRED = gettext_lazy('You are not authorized. Please, log in.')
+from .translations import NO_PERMISSION_MESSAGE, LOGIN_REQUIRED_MESSAGE
 
 
 class CheckPermissionMixin(AccessMixin):
@@ -21,6 +18,6 @@ class LoginRequiredMixin(AccessMixin):
 
     def dispatch(self, request, *args, **kwargs):
         if not request.user.is_authenticated:
-            messages.error(self.request, LOGIN_REQUIRED)
+            messages.error(self.request, LOGIN_REQUIRED_MESSAGE)
             return redirect(self.no_auth_url)
         return super().dispatch(request, *args, **kwargs)

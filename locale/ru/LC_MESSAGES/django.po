@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-24 03:21+0500\n"
+"POT-Creation-Date: 2022-07-26 22:00+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,29 +20,33 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: task_manager/mixins.py:7
-msgid "You cannot change other users!"
-msgstr "У вас нет прав для изменения другого пользователя."
-
-#: task_manager/mixins.py:8
-msgid "You are not authorized. Please, log in."
-msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
-
 #: task_manager/templates/base.html:12 task_manager/templates/base.html:16
 #: task_manager/templates/index.html:7
 msgid "Task-manager"
 msgstr "Менеджер задач"
 
-#: task_manager/templates/base.html:20 task_manager/users/views.py:22
-#: task_manager/users/views.py:24
+#: task_manager/templates/base.html:20 task_manager/translations.py:18
 msgid "Users"
 msgstr "Пользователи"
+
+#: task_manager/templates/base.html:24 task_manager/translations.py:40
+#: task_manager/translations.py:42
+msgid "Statuses"
+msgstr "Статусы"
+
+#: task_manager/templates/base.html:27
+msgid "Tasks"
+msgstr "Задачи"
+
+#: task_manager/templates/base.html:30
+msgid "Labels"
+msgstr "Метки"
 
 #: task_manager/templates/base.html:37
 msgid "Sign out"
 msgstr "Выход"
 
-#: task_manager/templates/base.html:41 task_manager/views.py:12
+#: task_manager/templates/base.html:41 task_manager/translations.py:26
 msgid "Sign in"
 msgstr "Вход"
 
@@ -66,66 +70,118 @@ msgstr "Практические курсы по программировани�
 msgid "Learn more"
 msgstr "Узнать больше"
 
-#: task_manager/templates/users/users.html:12
-msgid "User name"
-msgstr "Имя пользователя"
+#: task_manager/templates/statuses/statuses_list.html:6
+#: task_manager/translations.py:43
+msgid "Create status"
+msgstr "Создать статус"
 
-#: task_manager/templates/users/users.html:13
-msgid "Full name"
-msgstr "Полное имя"
+#: task_manager/templates/statuses/statuses_list.html:11
+#: task_manager/translations.py:37
+msgid "Name"
+msgstr "Имя"
 
-#: task_manager/templates/users/users.html:14
+#: task_manager/templates/statuses/statuses_list.html:12
+#: task_manager/templates/users/users_list.html:13
+#: task_manager/translations.py:38
 msgid "Created at"
 msgstr "Дата создания"
 
-#: task_manager/templates/users/users.html:26 task_manager/users/views.py:14
+#: task_manager/templates/statuses/statuses_list.html:23
+#: task_manager/templates/users/users_list.html:25
+#: task_manager/translations.py:4
 msgid "Change"
 msgstr "Изменить"
 
-#: task_manager/templates/users/users.html:28 task_manager/users/views.py:15
+#: task_manager/templates/statuses/statuses_list.html:25
+#: task_manager/templates/users/users_list.html:27
+#: task_manager/translations.py:5
 msgid "Delete"
 msgstr "Удалить"
 
-#: task_manager/users/views.py:13
+#: task_manager/templates/users/users_list.html:11
+msgid "User name"
+msgstr "Имя пользователя"
+
+#: task_manager/templates/users/users_list.html:12
+msgid "Full name"
+msgstr "Полное имя"
+
+#: task_manager/translations.py:7
 msgid "Register"
 msgstr "Зарегистрировать"
 
-#: task_manager/users/views.py:17
-msgid "User created successfully!"
+#: task_manager/translations.py:9
+msgid "User successfully created!"
 msgstr "Пользователь успешно создан!"
 
-#: task_manager/users/views.py:18
-msgid "User profile changed successfully!"
+#: task_manager/translations.py:10
+msgid "User profile successfully changed!"
 msgstr "Профиль пользователя успешно изменен!"
 
-#: task_manager/users/views.py:19
+#: task_manager/translations.py:11
 msgid "User deleted!"
 msgstr "Пользователь удален!"
 
-#: task_manager/users/views.py:21
-msgid "User"
-msgstr "Пользователь"
+#: task_manager/translations.py:12
+msgid "You cannot change other users!"
+msgstr "У вас нет прав для изменения другого пользователя!"
 
-#: task_manager/users/views.py:25
+#: task_manager/translations.py:13
+msgid "You are not authorized. Please, log in."
+msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
+
+#: task_manager/translations.py:19
 msgid "Create user"
 msgstr "Создание пользователя"
 
-#: task_manager/users/views.py:26
+#: task_manager/translations.py:20
 msgid "Change user"
 msgstr "Изменение пользователя"
 
-#: task_manager/users/views.py:27
+#: task_manager/translations.py:21
 msgid "Delete user"
 msgstr "Удаление пользователя"
 
-#: task_manager/views.py:9
-msgid "you logged in successfully!"
-msgstr "Вы залогинены"
+#: task_manager/translations.py:23
+msgid "you successfully logged in!"
+msgstr "Вы залогинены!"
 
-#: task_manager/views.py:10
-msgid "you logged out successfully!"
-msgstr "Вы разлогинены"
+#: task_manager/translations.py:24
+msgid "you  successfully logged out!"
+msgstr "Вы разлогинены!"
 
-#: task_manager/views.py:11
+#: task_manager/translations.py:25
 msgid "login"
 msgstr "Войти"
+
+#: task_manager/translations.py:30
+msgid "Create"
+msgstr "Создать"
+
+#: task_manager/translations.py:32
+msgid "Status successfully created!"
+msgstr "Статус успешно создан!"
+
+#: task_manager/translations.py:33
+msgid "Status successfully changed!"
+msgstr "Статус успешно изменен!"
+
+#: task_manager/translations.py:34
+msgid "Status successfully deleted!"
+msgstr "Статус успешно удален!"
+
+#: task_manager/translations.py:35
+msgid "You are not authorized"
+msgstr "Вы не авторизованы!"
+
+#: task_manager/translations.py:39
+msgid "Status"
+msgstr "Статус"
+
+#: task_manager/translations.py:44
+msgid "Change status"
+msgstr "Изменение статуса"
+
+#: task_manager/translations.py:45
+msgid "Delete status"
+msgstr "Удаление статуса"

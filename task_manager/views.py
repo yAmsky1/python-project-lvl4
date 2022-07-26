@@ -2,14 +2,14 @@ from django.contrib import messages
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
-from django.utils.translation import gettext_lazy
 from django.views.generic import TemplateView
 
-
-LOGGED_IN_MESSAGE = gettext_lazy('you logged in successfully!')
-LOGGED_OUT_MESSAGE = gettext_lazy('you logged out successfully!')
-LOGIN_BUTTON = gettext_lazy('login')
-LOGIN_TITLE = gettext_lazy('Sign in')
+from .translations import (
+    LOGGED_IN_MESSAGE,
+    LOGGED_OUT_MESSAGE,
+    LOGIN_BUTTON,
+    LOGIN_TITLE
+)
 
 
 class Index(TemplateView):

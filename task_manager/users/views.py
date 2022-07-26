@@ -2,34 +2,28 @@ from django.contrib.auth.mixins import UserPassesTestMixin
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.messages.views import SuccessMessageMixin
-from django.utils.translation import gettext_lazy
 
 from task_manager.mixins import CheckPermissionMixin, LoginRequiredMixin
+
 from .forms import CreateUserForm
 from .models import User
-
-
-# Translations
-REGISTER_USER_BUTTON = gettext_lazy('Register')
-CHANGE_USER_BUTTON = gettext_lazy('Change')
-DELETE_USER_BUTTON = gettext_lazy('Delete')
-
-USER_CREATED_MESSAGE = gettext_lazy('User created successfully!')
-USER_CHANGED_MESSAGE = gettext_lazy('User profile changed successfully!')
-USER_DELETED_MESSAGE = gettext_lazy('User deleted!')
-
-VERBOSE_NAME = gettext_lazy('User')
-VERBOSE_NAME_PL = gettext_lazy('Users')
-
-USER_LIST_TITLE = gettext_lazy('Users')
-CREATE_USER_TITLE = gettext_lazy('Create user')
-CHANGE_USER_TITLE = gettext_lazy('Change user')
-DELETE_USER_TITLE = gettext_lazy('Delete user')
+from ..translations import (
+    REGISTER_USER_BUTTON,
+    CHANGE_BUTTON,
+    DELETE_BUTTON,
+    USER_CREATED_MESSAGE,
+    USER_CHANGED_MESSAGE,
+    USER_DELETED_MESSAGE,
+    USER_LIST_TITLE,
+    CREATE_USER_TITLE,
+    CHANGE_USER_TITLE,
+    DELETE_USER_TITLE,
+)
 
 
 class UsersList(ListView):
     model = User
-    template_name = 'users/users.html'
+    template_name = 'users/users_list.html'
     context_object_name = 'users'
 
     def get_context_data(self, **kwargs):
@@ -71,7 +65,7 @@ class ChangeUser(
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = CHANGE_USER_TITLE
-        context['button_text'] = CHANGE_USER_BUTTON
+        context['button_text'] = CHANGE_BUTTON
         return context
 
 
@@ -93,5 +87,5 @@ class DeleteUser(
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = DELETE_USER_TITLE
-        context['button_text'] = DELETE_USER_BUTTON
+        context['button_text'] = DELETE_BUTTON
         return context
