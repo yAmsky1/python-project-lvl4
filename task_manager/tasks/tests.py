@@ -108,3 +108,37 @@ class TasksTests(TestCase):
             Task.objects.get(pk=self.task1.pk)
         self.assertRedirects(response, '/tasks/', status_code=HTTP302)
         self.assertContains(response, TASK_DELETED_MESSAGE)
+
+    def test_filter_by_status(self):
+        self.client.force_login(self.user1)
+        filtered_by_status = "{0}?status=2".format(reverse('tasks:list'))
+        response = self.client.get(filtered_by_status)
+        self.assertEqual(response.status_code, HTTP200)
+        self.assertQuerysetEqual(list(response.context['tasks']), [self.task2])
+
+    def test_filter_by_executive(self):
+        self.client.force_login(self.user1)
+        list_filtered_by_exec = "{0}?executor=2".format(reverse('tasks:list'))
+        response = self.client.get(list_filtered_by_exec)
+        self.assertEqual(response.status_code, HTTP200)
+        self.assertQuerysetEqual(list(response.context['tasks']), [self.task1])
+
+    def test_filter_by_label(self):
+        self.client.force_login(self.user1)
+        filtered_by_label = "{0}?labels=1".format(reverse('tasks:list'))
+        response = self.client.get(filtered_by_label)
+        self.assertEqual(response.status_code, HTTP200)
+        self.assertQuerysetEqual(
+            list(response.context['tasks']),
+            [self.task1, self.task2],
+        )
+
+    def test_filter_by_own_tasks(self):
+        self.client.force_login(self.user2)
+        filtered_by_own = "{0}?own_task=on".format(reverse('tasks:list'))
+        response = self.client.get(filtered_by_own)
+        self.assertEqual(response.status_code, HTTP200)
+        self.assertQuerysetEqual(
+            list(response.context['tasks']),
+            [self.task2],
+        )

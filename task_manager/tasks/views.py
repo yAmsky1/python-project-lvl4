@@ -7,7 +7,6 @@ from django.views.generic import (
     CreateView,
     DeleteView,
     UpdateView,
-    ListView,
     DetailView
 )
 from django_filters.views import FilterView
