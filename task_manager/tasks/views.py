@@ -3,8 +3,13 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, DeleteView, UpdateView, ListView
-
+from django.views.generic import (
+    CreateView,
+    DeleteView,
+    UpdateView,
+    ListView,
+    DetailView
+)
 from ..mixins import CheckPermissionMixin
 from task_manager.users.models import User
 from .models import Task
@@ -12,6 +17,7 @@ from .forms import TaskForm
 
 from ..translations import (
     TASK_LIST_TITLE,
+    TASK_VIEW_TITLE,
     TASK_CREATED_MESSAGE,
     CREATE_TASK_TITLE,
     CREATE_BUTTON,
@@ -34,6 +40,18 @@ class TasksList(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = TASK_LIST_TITLE
+        return context
+
+
+class TaskView(LoginRequiredMixin, DetailView):
+    model = Task
+    template_name = 'tasks/task_view.html'
+    context_object_name = 'task'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = TASK_VIEW_TITLE
+        context['labels'] = self.get_object().labels.all()
         return context
 
 
