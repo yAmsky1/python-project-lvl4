@@ -10,6 +10,9 @@ from django.views.generic import (
     ListView,
     DetailView
 )
+from django_filters.views import FilterView
+
+from .filters import TasksFilter
 from ..mixins import CheckPermissionMixin
 from task_manager.users.models import User
 from .models import Task
@@ -29,17 +32,20 @@ from ..translations import (
     DELETERIGHTS_MESSAGE,
     DELETE_TASK_TITLE,
     DELETE_BUTTON,
+    SHOW_BUTTON,
 )
 
 
-class TasksList(LoginRequiredMixin, ListView):
+class TasksList(LoginRequiredMixin, FilterView):
     model = Task
     template_name = 'tasks/tasks_list.html'
     context_object_name = 'tasks'
+    filterset_class = TasksFilter
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = TASK_LIST_TITLE
+        context['button_text'] = SHOW_BUTTON
         return context
 
 

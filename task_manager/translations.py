@@ -58,7 +58,7 @@ TASK_LABEL = gettext_lazy('label')
 TASK_CREATED_MESSAGE = gettext_lazy('Task successfully created!')
 TASK_CHANGED_MESSAGE = gettext_lazy('Task successfully changed!')
 TASK_DELETED_MESSAGE = gettext_lazy('Task successfully deleted!')
-DELETERIGHTS_MESSAGE = gettext_lazy('The task can only be deleted by its creator!')  # noqa: E501
+DELETERIGHTS_MESSAGE = gettext_lazy('The task can only be deleted by its creator!')
 
 TASK_CREATED_AT = gettext_lazy('Created at')
 
@@ -87,3 +87,10 @@ LABELS_LIST_TITLE = gettext_lazy('Labels')
 CREATE_LABEL_TITLE = gettext_lazy('Create label')
 CHANGE_LABEL_TITLE = gettext_lazy('Change label')
 DELETE_LABEL_TITLE = gettext_lazy('Delete label')
+
+# Filters
+EXECUTIVE_LABEL = gettext_lazy('Executor')
+LABEL_LABEL = gettext_lazy('Label')
+OWN_TASKS_LABEL = gettext_lazy('my tasks only')
+STATUS_LABEL = gettext_lazy('Status')
+SHOW_BUTTON = gettext_lazy('Show')

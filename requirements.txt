@@ -39,4 +39,5 @@ coverage~=6.4.1
 setuptools~=45.2.0
 packaging~=21.3
 future~=0.18.2
+django-filter~=22.1
 python-dotenv~=0.20.0
