@@ -10,7 +10,7 @@ from ..translations import (
 )
 
 
-STATUS_CODE_OK = 200
+HTTP200 = 200
 
 
 class TestStatuses(TestCase):
@@ -24,7 +24,7 @@ class TestStatuses(TestCase):
     def test_statuses_list(self):
         self.client.force_login(self.user)
         response = self.client.get(reverse('statuses:list'))
-        self.assertEqual(response.status_code, STATUS_CODE_OK)
+        self.assertEqual(response.status_code, HTTP200)
         statuses_list = list(response.context['statuses'])
         self.assertQuerysetEqual(statuses_list, [self.status1, self.status2])
 

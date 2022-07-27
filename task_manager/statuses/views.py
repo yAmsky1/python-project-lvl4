@@ -10,7 +10,7 @@ from ..translations import (
     STATUS_LIST_TITLE,
     STATUS_CREATED_MESSAGE,
     CREATE_STATUS_TITLE,
-    CREATE_STATUS_BUTTON,
+    CREATE_BUTTON,
     STATUS_CHANGED_MESSAGE,
     CHANGE_STATUS_TITLE,
     CHANGE_BUTTON,
@@ -50,7 +50,7 @@ class CreateStatus(
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = CREATE_STATUS_TITLE
-        context['button_text'] = CREATE_STATUS_BUTTON
+        context['button_text'] = CREATE_BUTTON
         return context
 
 

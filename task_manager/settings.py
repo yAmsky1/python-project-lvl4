@@ -52,11 +52,11 @@ INSTALLED_APPS = [
     'task_manager',
     'bootstrap4',
     'task_manager.users',
-    'task_manager.statuses'
+    'task_manager.statuses',
+    'task_manager.tasks'
 ]
 
 MIDDLEWARE = [
-    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -131,6 +131,11 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+LANGUAGES = (
+    ("en", "English"),
+    ("ru", "Russian"),
+)
 
 
 # Static files (CSS, JavaScript, Images)

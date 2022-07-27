@@ -9,7 +9,8 @@ from ..translations import (
 )
 
 
-STATUS_CODE_OK = 200
+HTTP200 = 200
+HTTP302 = 302
 
 
 class TestUser(TestCase):
@@ -22,7 +23,7 @@ class TestUser(TestCase):
     def test_create_user(self):
         url = reverse('users:create')
         response = self.client.get(url)
-        self.assertEqual(response.status_code, STATUS_CODE_OK)
+        self.assertEqual(response.status_code, HTTP200)
         self.assertTemplateUsed(response, template_name='form.html')
         new_user = {
             'username': "test_user_name0",
@@ -33,7 +34,7 @@ class TestUser(TestCase):
         }
         response = self.client.post(url, new_user, follow=True)
         self.assertContains(response, USER_CREATED_MESSAGE)
-        self.assertRedirects(response, '/login/', status_code=302)
+        self.assertRedirects(response, '/login/', status_code=HTTP302)
         created_user = User.objects.get(username=new_user['username'])
         self.assertTrue(created_user.check_password('qwerasdf1'))
         self.assertEqual(created_user.first_name, 'Guido')
@@ -43,7 +44,7 @@ class TestUser(TestCase):
         users_list = list(response.context['users'])
         test_user1, test_user2 = users_list
 
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, HTTP200)
         self.assertEqual(test_user1.username, 'username01')
         self.assertEqual(test_user2.first_name, 'Anton')
 

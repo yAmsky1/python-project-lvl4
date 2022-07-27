@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Status
 
 
-class UserAdmin(admin.ModelAdmin):
+class StatusAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'created_at',
@@ -11,4 +11,4 @@ class UserAdmin(admin.ModelAdmin):
     search_fields = ('name',)
 
 
-admin.site.register(Status, UserAdmin)
+admin.site.register(Status, StatusAdmin)
