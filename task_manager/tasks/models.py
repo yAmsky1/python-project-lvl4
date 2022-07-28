@@ -10,6 +10,7 @@ from ..translations import (
     VERBOSE_TASK_NAME,
     VERBOSE_TASK_NAME_PL,
     TASK_EXECUTIVE,
+    VERBOSE_LABEL_NAME_PL,
 )
 
 
@@ -40,6 +41,7 @@ class Task(models.Model):
     )
     labels = models.ManyToManyField(
         Label,
+        verbose_name=VERBOSE_LABEL_NAME_PL,
         related_name='task_label',
         blank=True,
         through='TaskLabelsRelations',
