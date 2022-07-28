@@ -41,3 +41,4 @@ packaging~=21.3
 future~=0.18.2
 django-filter~=22.1
 python-dotenv~=0.20.0
+rollbar~=0.16.3
