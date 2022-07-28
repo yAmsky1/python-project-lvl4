@@ -13,7 +13,7 @@ REGISTER_USER_BUTTON = gettext_lazy('Register')
 
 USER_CREATED_MESSAGE = gettext_lazy('User successfully created!')
 USER_CHANGED_MESSAGE = gettext_lazy('User profile successfully changed!')
-USER_DELETED_MESSAGE = gettext_lazy('User deleted!')
+USER_DELETED_MESSAGE = gettext_lazy('User successfully deleted!')
 NO_PERMISSION_MESSAGE = gettext_lazy('You cannot change other users!')
 ERROR_USER_IN_USE_MESSAGE = gettext_lazy('Cannot delete a user in use!')
 

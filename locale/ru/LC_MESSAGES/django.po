@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-28 02:33+0500\n"
+"POT-Creation-Date: 2022-07-28 14:01+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -126,8 +126,7 @@ msgstr "Автор"
 
 #: task_manager/templates/tasks/task_view.html:19
 #: task_manager/templates/tasks/tasks_list.html:26
-#: task_manager/translations.py:55
-#: task_manager/translations.py:92
+#: task_manager/translations.py:55 task_manager/translations.py:92
 msgid "Executor"
 msgstr "Исполнитель"
 
@@ -165,23 +164,23 @@ msgstr "Зарегистрировать"
 
 #: task_manager/translations.py:14
 msgid "User successfully created!"
-msgstr "Пользователь успешно создан!"
+msgstr "Пользователь успешно зарегистрирован"
 
 #: task_manager/translations.py:15
 msgid "User profile successfully changed!"
-msgstr "Профиль пользователя успешно изменен!"
+msgstr "Пользователь успешно изменен"
 
 #: task_manager/translations.py:16
-msgid "User deleted!"
-msgstr "Пользователь удален!"
+msgid "User successfully deleted!"
+msgstr "Пользователь успешно удален"
 
 #: task_manager/translations.py:17
 msgid "You cannot change other users!"
-msgstr "У вас нет прав для изменения другого пользователя!"
+msgstr "У вас нет прав для изменения другого пользователя"
 
 #: task_manager/translations.py:18
 msgid "Cannot delete a user in use!"
-msgstr " Невозможно удалить пользователя, потому что он используется!"
+msgstr "Невозможно удалить пользователя, потому что он используется"
 
 #: task_manager/translations.py:24
 msgid "Create user"
@@ -197,11 +196,11 @@ msgstr "Удалить пользователя"
 
 #: task_manager/translations.py:30
 msgid "you successfully logged in!"
-msgstr "Вы залогинились!"
+msgstr "Вы залогинены"
 
 #: task_manager/translations.py:31
 msgid "you  successfully logged out!"
-msgstr "Вы разлогинились!"
+msgstr "Вы разлогинены"
 
 #: task_manager/translations.py:32
 msgid "login"
@@ -209,19 +208,19 @@ msgstr "Войти"
 
 #: task_manager/translations.py:37
 msgid "Status successfully created!"
-msgstr "Статус успешно создан!"
+msgstr "Статус успешно создан"
 
 #: task_manager/translations.py:38
 msgid "Status successfully changed!"
-msgstr "Статус успешно изменен!"
+msgstr "Статус успешно изменен"
 
 #: task_manager/translations.py:39
 msgid "Status successfully deleted!"
-msgstr "Статус успешно удален!"
+msgstr "Статус успешно удален"
 
 #: task_manager/translations.py:40
 msgid "Cannot delete a status in use!"
-msgstr " Невозможно удалить статус, потому что он используется!"
+msgstr "Невозможно удалить статус, потому что он используется"
 
 #: task_manager/translations.py:49
 msgid "Change status"
@@ -241,19 +240,19 @@ msgstr "Метка"
 
 #: task_manager/translations.py:58
 msgid "Task successfully created!"
-msgstr "Задача успешно создана!"
+msgstr "Задача успешно создана"
 
 #: task_manager/translations.py:59
 msgid "Task successfully changed!"
-msgstr "Задача успешно изменена!"
+msgstr "Задача успешно изменена"
 
 #: task_manager/translations.py:60
 msgid "Task successfully deleted!"
-msgstr "Задача успешно удалена!"
+msgstr "Задача успешно удалена"
 
 #: task_manager/translations.py:61
 msgid "The task can only be deleted by its creator!"
-msgstr "Задачу может удалить только её автор!"
+msgstr "Задачу может удалить только её автор"
 
 #: task_manager/translations.py:65
 msgid "Task"
@@ -273,19 +272,19 @@ msgstr "Удалить задачу"
 
 #: task_manager/translations.py:76
 msgid "Label successfully created!"
-msgstr "Метка успешно создана!"
+msgstr "Метка успешно создана"
 
 #: task_manager/translations.py:77
 msgid "Label successfully changed!"
-msgstr "Метка успешно изменена!"
+msgstr "Метка успешно изменена"
 
 #: task_manager/translations.py:78
 msgid "Label successfully deleted!"
-msgstr "Метка успешно удалена!"
+msgstr "Метка успешно удалена"
 
 #: task_manager/translations.py:79
 msgid "Cannot delete a label in use"
-msgstr " Невозможно удалить метку, потому что она используется!"
+msgstr "Невозможно удалить метку, потому что она используется"
 
 #: task_manager/translations.py:83 task_manager/translations.py:93
 msgid "Label"
@@ -301,7 +300,7 @@ msgstr "Удалить метку"
 
 #: task_manager/translations.py:94
 msgid "my tasks only"
-msgstr "только свои задачи"
+msgstr "Только свои задачи"
 
 #: task_manager/translations.py:96
 msgid "Show"
