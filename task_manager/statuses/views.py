@@ -3,7 +3,12 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.views.generic import ListView, UpdateView, DeleteView, CreateView
 
-from ..mixins import CheckPermissionMixin, LoginRequiredMixin
+from ..mixins import (
+    CheckPermissionMixin,
+    LoginRequiredMixin,
+    FormValidMixin,
+)
+
 from .forms import StatusForm
 from .models import Status
 from ..translations import (
@@ -74,6 +79,7 @@ class ChangeStatus(
 
 class DeleteStatus(
     LoginRequiredMixin,
+    FormValidMixin,
     SuccessMessageMixin,
     CheckPermissionMixin,
     DeleteView,

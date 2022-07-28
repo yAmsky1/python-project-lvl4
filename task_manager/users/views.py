@@ -3,7 +3,11 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.messages.views import SuccessMessageMixin
 
-from task_manager.mixins import CheckPermissionMixin, LoginRequiredMixin
+from task_manager.mixins import (
+    CheckPermissionMixin,
+    LoginRequiredMixin,
+    FormValidMixin
+)
 
 from .forms import CreateUserForm
 from .models import User
@@ -72,6 +76,7 @@ class ChangeUser(
 class DeleteUser(
     LoginRequiredMixin,
     UserPassesTestMixin,
+    FormValidMixin,
     SuccessMessageMixin,
     CheckPermissionMixin,
     DeleteView

@@ -90,6 +90,7 @@ WSGI_APPLICATION = 'task_manager.wsgi.application'
 ROLLBAR = {
     'access_token': os.environ.get('ACCESS_TOKEN'),
     'environment': 'development' if DEBUG else 'production',
+    'branch': 'main',
     'root': BASE_DIR,
 }
 
