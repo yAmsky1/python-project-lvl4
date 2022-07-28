@@ -168,11 +168,11 @@ msgstr "Пользователь успешно зарегистрирован"
 
 #: task_manager/translations.py:15
 msgid "User profile successfully changed!"
-msgstr "Пользователь успешно изменен"
+msgstr "Пользователь успешно изменён"
 
 #: task_manager/translations.py:16
 msgid "User successfully deleted!"
-msgstr "Пользователь успешно удален"
+msgstr "Пользователь успешно удалён"
 
 #: task_manager/translations.py:17
 msgid "You cannot change other users!"
@@ -212,11 +212,11 @@ msgstr "Статус успешно создан"
 
 #: task_manager/translations.py:38
 msgid "Status successfully changed!"
-msgstr "Статус успешно изменен"
+msgstr "Статус успешно изменён"
 
 #: task_manager/translations.py:39
 msgid "Status successfully deleted!"
-msgstr "Статус успешно удален"
+msgstr "Статус успешно удалён"
 
 #: task_manager/translations.py:40
 msgid "Cannot delete a status in use!"
