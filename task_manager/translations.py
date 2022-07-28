@@ -2,7 +2,7 @@ from django.utils.translation import gettext_lazy
 # Translations
 # Common
 CHANGE_BUTTON = gettext_lazy('Change')
-DELETE_BUTTON = gettext_lazy('Delete')
+DELETE_BUTTON = gettext_lazy('Yes, delete')
 CREATE_BUTTON = gettext_lazy('Create')
 
 NOT_AUTHORIZED_MESSAGE = gettext_lazy('You are not authorized. Please, log in.')

@@ -110,7 +110,6 @@ msgstr "Изменить"
 #: task_manager/templates/tasks/task_view.html:44
 #: task_manager/templates/tasks/tasks_list.html:45
 #: task_manager/templates/users/users_list.html:27
-#: task_manager/translations.py:5
 msgid "Delete"
 msgstr "Удалить"
 
@@ -305,3 +304,7 @@ msgstr "Только свои задачи"
 #: task_manager/translations.py:96
 msgid "Show"
 msgstr "Показать"
+
+#: task_manager/translations.py:5
+msgid "Yes, delete"
+msgstr "Да, удалить"
